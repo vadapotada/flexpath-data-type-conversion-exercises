@@ -532,7 +532,12 @@ function exercise_19() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const todayDate = new Date();
+  const futureDate = new Date("July 17, 2027");
+
+  const dateDifference = futureDate - todayDate;
+  const dayDifference = Math.floor(dateDifference / (1000 * 60 * 60 * 24));
+  console.log(dayDifference);
 
   // CODE IN THE OPEN LINES ABOVE
 }
