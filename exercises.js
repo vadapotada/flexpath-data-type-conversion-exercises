@@ -18,6 +18,27 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
 
   // Modify the line of code BELOW to run a different exercise
   exercise_01();
+  exercise_02();
+  exercise_03();
+  exercise_04();
+  exercise_05();
+  exercise_06();  
+  exercise_07();
+  exercise_08();
+  exercise_09();  
+  exercise_10();
+
+  // Need to fix response to allow 2 decimals
+  exercise_11(); 
+  
+  exercise_12();
+  exercise_13();  
+  exercise_14();
+  exercise_15();
+  exercise_16();  
+  exercise_17();
+  exercise_18();
+  exercise_19();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -40,7 +61,23 @@ function exercise_01() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let strVariable = "Hello, World!";
+  let numVariable = 32;
+  let boolVariable = true;
+  let objVariable = {
+    title: "Carl's Doomsday Scenario",
+    author: "Matt Dinniman",
+    publishedYear: 2021
+  };
+
+  let undeclaredVariable;
+
+  console.log(`String: ${typeof(strVariable)}
+    Number: ${typeof(numVariable)}
+    Boolean: ${typeof(boolVariable)}
+    Object: ${typeof(objVariable)}
+    Undefined: ${undeclaredVariable}
+    `);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -60,7 +97,10 @@ function exercise_02() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const employeeAge = 32;
+
+  let ageString = employeeAge.toString();
+  console.log(`This employee is ${ageString} years old.`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -82,7 +122,12 @@ function exercise_03() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let trueValue = Boolean(1);
+  let falseValue = Boolean(0);
+
+  console.log(`Value 1: ${trueValue}
+    Value 0: ${falseValue}
+    `);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -101,7 +146,10 @@ function exercise_04() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let antiConversion = "four thousand seven hundred and eighty-four";
+  let notNumber = Number(antiConversion);
+
+  console.log(isNaN(notNumber));
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -122,7 +170,8 @@ function exercise_05() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const vadaAge = 31;
+  console.log(`I am ${vadaAge} years old.`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -148,7 +197,8 @@ function exercise_06() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  console.log(name + " has " + number + " apples.");
+  console.log(`${name} has ${number} apples.`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -166,7 +216,15 @@ function exercise_07() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let bookReport = {
+    title: "Dungeon Crawler Carl",
+    author: "Matt Dinniman",
+    published: 2020,
+    read: new Date("August 2, 2026")
+  };
+
+  let conversionObj = JSON.stringify(bookReport);
+  console.log(conversionObj);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -189,7 +247,9 @@ function exercise_08() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let newEmployee = JSON.parse(jsonStringToParse);
+  console.log(`Object Conversion: ${JSON.stringify(newEmployee)}
+    Property: ${newEmployee.name}`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -209,7 +269,11 @@ function exercise_09() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let decimalVariable = 4.7954681
+  console.log(`Round: ${Math.round(decimalVariable)}
+  Ceiling: ${Math.ceil(decimalVariable)}
+  Floor: ${Math.floor(decimalVariable)}
+  `);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -229,7 +293,8 @@ function exercise_10() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let largeFloat = 12.89472837894735
+  console.log(`Rounded Decimal: ${largeFloat.toFixed(2)}`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -251,7 +316,12 @@ function exercise_11() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const largeInteger = 4805760758981.23
+  const formatInteger = new Intl.NumberFormat('en-US');
+  const formatNumber = formatInteger.format(largeInteger);
+  console.log(`Original Number: ${largeInteger}
+    Formatted Number: ${formatNumber}
+    `);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -276,7 +346,11 @@ function exercise_12() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const salary1 = 17328
+  const monthlySalary = salary1 / 12
+
+  let formattedIntlSalary = new Intl.NumberFormat('en-US', {style: "currency", currency: "USD"});
+  console.log(`US Dollars: ${formattedIntlSalary.format(monthlySalary)}`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -301,7 +375,11 @@ function exercise_13() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const salary = 132000
+
+  let yenConversion = new Intl.NumberFormat('jp-JP', {style: "currency", currency: "JPY"});
+  console.log(`Yen: ${yenConversion.format(salary)}`);
+
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -321,7 +399,9 @@ function exercise_14() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const dateObj = new Date("2026-11-10T05:08:32");
+  console.log(`Date: ${dateObj.toDateString()}
+  Time: ${dateObj.toTimeString()}`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -343,7 +423,9 @@ function exercise_15() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const dateObj2 = new Date();
+  console.log(`Locale en-US: ${dateObj2.toLocaleDateString('en-US')}`);
+  console.log(`Locale en-GB: ${dateObj2.toLocaleDateString('en-GB')}`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -361,7 +443,11 @@ function exercise_16() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  try {
+    let invalidJson = JSON.parse("This is a string.")
+  } catch (error) {
+    console.log("Error:", error.message)
+  };
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -378,7 +464,9 @@ function exercise_17() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const trueBooleanValue = true;
+  const stringBooleanValue = trueBooleanValue.toString();
+  console.log(`This is ${stringBooleanValue}.`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -414,7 +502,15 @@ function exercise_18() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const nineDigitNum = 284968358.92;
+  let formatUS = new Intl.NumberFormat('en-US', {style: "currency", currency: "USD"});
+  let formatRUS = new Intl.NumberFormat('ru-RU', {style: "currency", currency: "RUB"});
+  let formatJP = new Intl.NumberFormat('jp-JP', {style: "currency", currency: "JPY"});
+  console.log(`
+    USD: ${formatUS.format(nineDigitNum)},
+    RUB: ${formatRUS.format(nineDigitNum)},
+    JPY: ${formatJP.format(nineDigitNum)}
+    `);
 
   // CODE IN THE OPEN LINES ABOVE
 }
